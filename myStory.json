@@ -1,0 +1,87 @@
+{
+    "Title": "The Clockwork City",
+    "Credits": "Created by Guangyang Chen (gchen79@ucsc.edu).",
+    "InitialLocation": "Home",
+    "PreviousLocation": "",
+    "InventoryItems": [],
+    "Locations": {
+        "Home": {
+            "Body": "Nestled in the quieter outer ring of The Clockwork City, the home serves as the starting point of the adventure. This cozy workshop is cluttered with mechanical parts and tools, reflecting the apprentice's dedication to learning the engineering arts. It's a safe place where plans are made and the journey begins.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Streets"
+                }
+            ]
+        },
+        "Streets": {
+            "Body": "The winding streets of The Clockwork City are lined with towering buildings made of brass and iron, connected by a network of pipes and gears that hiss steam into the air. Citizens of various professions hustle about, reflecting a city that is always busy. The streets serve as pathways to all major locations within the city and are where the player first encounters signs of malfunction—flickering street lamps and erratic steam vents.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Home"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Central Hub"
+                }
+            ]
+        },
+        "Central Hub": {
+            "Body": "The Central Hub is the nerve center of The Clockwork City, featuring a massive control console that monitors and regulates the city's core operations. This room buzzes with the sound of ticking clocks and whirring machines. Here, players can interact with the console to trigger changes elsewhere in the city, opening new paths or solving distant problems.",
+            "Controls": [
+                {
+                    "Text": "Reroute Steam Flow",
+                    "Effect": "You adjust the steam flow, stopping leaks in the city's pipelines.",
+                    "UnlocksLocation": "Clock Tower Gate"
+                },
+                {
+                    "Text": "Reset Time Synchronization",
+                    "Effect": "The city's clocks are now synchronized, ensuring accurate timekeeping."
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Streets"
+                },
+                {
+                    "Text": "Southwest",
+                    "Target": "Inventor's Workshop"
+                }
+            ]
+        },
+        "Inventor's Workshop": {
+            "Body": "Cluttered with unfinished inventions and scattered blueprints, the Inventor's Workshop smells strongly of oil and metal. This location houses many unique gadgets and tools, crucial for the city's development. The key—a specially crafted gear needed to unlock the Clock Tower Gate—is hidden among the clutter, a testament to the inventor's brilliance and paranoia.",
+            "ItemToCollect": {
+                "Name": "Special Gear"
+            },
+            "Choices": [
+                {
+                    "Text": "Northeast",
+                    "Target": "Central Hub"
+                },
+                {
+                    "Text": "East",
+                    "Target": "Clock Tower Gate"
+                }
+            ]
+        },
+        "Clock Tower Gate": {
+            "Body": "Guarding the entrance to the Clock Tower, this imposing gate is adorned with intricate metalwork featuring the city's emblem. It's currently shut tight, with a complex locking mechanism visible that requires the special gear from the Inventor's Workshop. This gate is a significant barrier, its unlocking marking a pivotal point in the game's progression.",
+            "Choices": [
+                {
+                    "Text": "Northwest",
+                    "Target": "Central Hub"
+                }
+            ],
+            "UnlockCondition": {
+                "Name": "Special Gear",
+                "UnlocksLocation": "Clock Tower"
+            }
+        },
+        "Clock Tower": {
+            "Body": "Dominating the city's skyline, the Clock Tower is both a marvel and a mystery. Inside, the tower is a labyrinth of gears and pendulums, all synchronizing to maintain the city's time and operations. This is where the climax of the game occurs, as the apprentice faces the ultimate challenge to restore harmony in the city."
+        }   
+    }
+}
